@@ -153,6 +153,7 @@ const Home = () => {
                       key={category.id}
                       name={category.name}
                       pic={category.pic}
+                      category_id={category.id}
                     />
                   )
               )}
@@ -167,6 +168,7 @@ const Home = () => {
                       key={category.id}
                       name={category.name}
                       pic={category.pic}
+                      category_id={category.id}
                     />
                   )
               )}
@@ -178,6 +180,8 @@ const Home = () => {
                   name={categories[4].name}
                   pic={categories[4].pic}
                   className="last-card"
+                  category_id={categories[4].id}
+
                 />
               )}
             </div>

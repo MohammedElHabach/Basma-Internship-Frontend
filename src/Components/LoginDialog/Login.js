@@ -11,28 +11,26 @@ const Login = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const loginURL = process.env.REACT_APP_URL+"/auth/login"
+  const loginURL = process.env.REACT_APP_URL + "/auth/login";
   const notify = () => toast.success("Logged in successfully");
 
-  const handleLogin = async(e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    try{
-      const res = await axios
-      .post(loginURL, {
+    try {
+      const res = await axios.post(loginURL, {
         email,
-        password
-      })
+        password,
+      });
       const data = await res.data;
       localStorage.setItem("token", data.access_token);
       notify();
-      {props.onClose()}
-    }
-    catch(err){
+      {
+        props.onClose();
+      }
+    } catch (err) {
       console.log(err);
-      toast.error(err.response.data.error)
+      toast.error(err.response.data.error);
     }
-    
-
   };
   return (
     <>
@@ -47,22 +45,31 @@ const Login = (props) => {
             Login
           </DialogTitle>
           <DialogContent>
-            <div style={{display:"flex",flexDirection:"column",gap:"1rem",marginTop:"1rem"}}>
-            <TextField
-              type="email"
-              label="Email"
-              variant="outlined"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "1rem",
+                marginTop: "1rem",
+              }}
+            >
+              <TextField
+                required
+                type="email"
+                label="Email"
+                variant="outlined"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
 
-            <TextField
-              type="password"
-              label="Password"
-              variant="outlined"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
+              <TextField
+                required
+                type="password"
+                label="Password"
+                variant="outlined"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
             </div>
           </DialogContent>
           <DialogActions>
