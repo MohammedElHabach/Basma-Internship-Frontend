@@ -55,7 +55,7 @@ const Footer = () => {
           <form className="newsletter">
             <input type="email" />
             <button className="submit_newsletter" type="submit">
-              الاشتراك{" "}
+              الاشتراك
             </button>
           </form>
           <div className="social-menu">

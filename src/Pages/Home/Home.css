@@ -95,6 +95,7 @@
   flex-wrap: wrap;
   gap: 3rem;
   margin-left: 4.8rem;
+
 }
 
 .card-wrapper1,
@@ -122,9 +123,7 @@
 .home_most_read {
   display: flex;
   justify-content: space-around;
-  /* margin-top: 2rem; */
   margin: 1rem auto;
-
   border-top: 1px solid gainsboro;
   border-bottom: 1px solid gainsboro;
   padding-top: 1rem;
@@ -135,6 +134,7 @@
   margin-left: 36.5rem;
   font-size: 25px;
   color: #38bb84;
+
 }
 
 .home_accordion {
