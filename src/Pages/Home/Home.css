@@ -1,0 +1,264 @@
+.home_topContainer {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: rgb(15, 75, 15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home_container {
+  width: 80vw;
+  min-height: 90vh;
+  background-color: white;
+  margin-top: 5rem;
+}
+
+.home_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 8rem;
+  width: 100%;
+}
+
+.logo_container {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.button_container {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.home_header img {
+  width: 10rem;
+  height: 10rem;
+}
+
+.login_button,
+.logbtn {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  font-size: large;
+}
+
+.logbtn2 {
+  display: none;
+}
+
+.menu_container {
+  position: relative;
+  top: -33rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.menu_container ul {
+  display: flex;
+  list-style: none;
+  gap: 4rem;
+}
+
+.mobile-menu-icon {
+  display: none;
+}
+
+.menu_container a {
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+  transition: color 0.3s;
+  cursor: pointer;
+  border-left: 1px solid white;
+  padding-left: 1rem;
+}
+
+.menu_container li:first-child a {
+  border-left: none;
+}
+
+.menu_container a:hover {
+  color: #38bb84;
+}
+
+/* 2nd section */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-left: 4.8rem;
+}
+
+.card-wrapper1,
+.card-wrapper2 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card-container > div:nth-child(3) {
+  margin-left: 5rem;
+}
+
+.card-container .last-card .card-media {
+  height: 33.7rem;
+  object-fit: cover;
+}
+
+.card-container .last-card {
+  width: 35.45rem;
+  height: 41.5rem;
+}
+
+/* 3rd section */
+.home_most_read {
+  display: flex;
+  justify-content: space-around;
+  /* margin-top: 2rem; */
+  margin: 1rem auto;
+
+  border-top: 1px solid gainsboro;
+  border-bottom: 1px solid gainsboro;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.home_most_read_left h3 {
+  margin-left: 36.5rem;
+  font-size: 25px;
+  color: #38bb84;
+}
+
+.home_accordion {
+  margin-top: 1rem;
+}
+
+.home_most_read_right img {
+  width: 36rem;
+  height: 19rem;
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: 1629px) {
+  .card-container {
+    margin-left: 0rem;
+    justify-content: space-around;
+  }
+  .card-container .last-card {
+    width: 24rem;
+    min-height: 20rem;
+  }
+  .home_most_read {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+  }
+
+  .home_most_read_left h3 {
+    margin-left: 0rem;
+    text-align: center;
+  }
+
+  .home_most_read_right img {
+    max-width: 94%;
+    height: 15rem;
+    margin: 0 auto;
+    display: block;
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 922px) {
+  .card-container {
+    margin-left: 0rem;
+    justify-content: center;
+  }
+  .card-container .last-card {
+    width: 20rem;
+    height: 15rem;
+    margin-right: 5rem;
+  }
+  .card-container .last-card .card-media {
+    height: 9rem;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 515px) {
+  .login_button {
+    display: none;
+  }
+
+  .home_topContainer {
+    background-color: white;
+  }
+
+  .home_header {
+    padding: 0;
+  }
+
+  .menu_container {
+    display: none;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+    position: absolute;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    top: 1.6rem;
+    right: 2rem;
+    background: transparent;
+  }
+
+  .menu_container_mobile {
+    position: absolute;
+    top: 5rem;
+    left: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu_container_mobile li {
+    list-style: none;
+    padding-bottom: 1rem;
+  }
+
+  .menu_container_mobile li a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .logo_container {
+    display: block;
+    position: absolute;
+    border: none;
+    outline: none;
+    top: 0.9rem;
+    left: 1.2rem;
+  }
+
+  .home_header img {
+    width: 7rem;
+    height: 4.2rem;
+  }
+
+  .swiper {
+    margin-top: 1rem;
+  }
+
+  .card-container {
+    margin-top: 2rem;
+  }
+}
