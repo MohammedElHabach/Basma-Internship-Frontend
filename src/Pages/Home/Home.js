@@ -15,7 +15,7 @@ const Home = () => {
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
   const [open, setOpen] = useState(false);
-  const [loggedIn, setLoggedIn] = useState(false); // Track user login status
+  const [loggedIn, setLoggedIn] = useState(false); 
   const token = localStorage.getItem("token");
   useEffect(() => {
     if (token) {
@@ -44,10 +44,7 @@ const Home = () => {
     }
   };
 
-  // let token = localStorage.getItem("token");
-  // let  buttonName = token ? 'تسجيل الخروج':'تسجيل الدخول'
-
-  const categoriesURL = process.env.REACT_APP_URL + "/categories";
+  const categoriesURL = process.env.REACT_APP_URL + "/categories/displayCategoriesByVisits";
 
   const fetchCategories = async () => {
     try {
